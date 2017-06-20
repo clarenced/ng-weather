@@ -1,0 +1,21 @@
+<div class="tile is-parent is-12" *ngIf="condition">
+    <article class="tile is-child box">
+        <button class="delete is-small is-pulled-right"></button>
+        <p class="title">{{condition.weatherCity.city}}</p>
+        <p class="subtitle">{{condition.dateTime}}, {{condition.weather}}</p>
+         <div class="columns">
+            <div class="column">
+                <p class="subtitle is-3 is-pulled-left">{{condition.temperature}}°C</p>
+                <figure class="image is-64x64 is-pulled-right ">
+                    <img src="{{condition.icon_url}}"/>      
+                </figure>              
+            </div>
+            <div class="column">
+                <p><strong>Precipitation:</strong> {{condition.precipitation}}%</p>
+                <p><strong>Humidite: </strong> {{condition.humidite}} %</p>
+                <p><strong>Vent: </strong> : {{condition.vent}} Km/h</p>
+            </div>
+        </div>
+    </article>
+</div>
+

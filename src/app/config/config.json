@@ -1,0 +1,10 @@
+{
+  "apiKey": "e909d55992f15ae1",
+  "lang": "FR",
+  "country": "France",
+  "latitude" : 48.856461,
+  "longitude" : 2.35236,
+  "city": "Paris",
+  "format": "json",
+  "apiUrl" : "http://api.wunderground.com/api/"
+}
