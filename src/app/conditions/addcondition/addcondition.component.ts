@@ -6,11 +6,12 @@ import { City } from '../condition/city';
 @Component({
   selector: 'ng-addcondition',
   templateUrl: './addcondition.component.html',
+  styleUrls: ['./addcondition.component.css']
 })
 export class AddConditionComponent {
 
   @Input()
-  cities : City[] = [];
+  cities: City[] = [];
 
   @Output()
   onSearchCity = new EventEmitter();

@@ -1,0 +1,11 @@
+.suggestion {
+    background-color: #ffffff;
+    color:#000000;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.suggestion:hover {
+    background-color : grey;
+    color: #ffffff;
+}

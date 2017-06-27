@@ -21,16 +21,20 @@ export class WeatherConditionsComponent implements OnInit {
     this.conditionService.getCondition().subscribe(conds => this.conditions.push(conds));
    }
 
-   searchCity(cityName){
-     this.conditionService.getCities().subscribe(searchedCities => {
-       const found = searchedCities.filter(city => {
-        return city.city.includes(cityName);
-       });
-       this.cities = [...found];
-     })
+   searchCity(cityName) {
+     if(cityName){
+        this.conditionService.getCities().subscribe(searchedCities => {
+        const found = searchedCities.filter(city => {
+          return city.city.includes(cityName);
+        });
+        this.cities = [...found];
+      });
+     } else {
+       this.cities = [];
+     }
    }
 
-   addCity(city){
+   addCity(city) {
     console.log(city);
    }
 }

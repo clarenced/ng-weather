@@ -21,7 +21,7 @@
             </p>
         </div>
         <ul>
-          <li (click)="addCity(city)" *ngFor="let city of cities">{{city.city}} | {{city.country}}</li>
+          <li class="suggestion" (click)="addCity(city)" *ngFor="let city of cities">{{city.city}} | {{city.country}}</li>
         </ul>
     </div>
     <button class="modal-close" (click)="closeModal()"></button>

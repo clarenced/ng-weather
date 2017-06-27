@@ -19,8 +19,8 @@ export class ConfigService extends AbstractService {
     return this.http.get('./src/app/config/config.json').map(this.extractData).catch(this.handleError);
   }
 
-  getCities() : Observable<any[]> {
-    return this.http.get('./src/app/config/city.list.json').map(this.extractData).catch(this.handleError);
+  getCities(): Observable<any[]> {
+    return this.http.get('./src/app/config/city.country.list.json').map(this.extractData).catch(this.handleError);
   }
 
 public extractData(res: Response) {
@@ -41,5 +41,5 @@ public handleError(error: Response | any) {
     return Observable.throw(errMsg);
   }
 
-  public map(from: any) : any {}
+  public map(from: any): any {}
 }
