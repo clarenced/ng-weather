@@ -22,7 +22,7 @@ export class WeatherConditionsComponent implements OnInit {
    }
 
    searchCity(cityName) {
-     if(cityName){
+     if (cityName) {
         this.conditionService.getCities().subscribe(searchedCities => {
         const found = searchedCities.filter(city => {
           return city.city.includes(cityName);

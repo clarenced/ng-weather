@@ -19,13 +19,13 @@ export class AddConditionComponent {
   @Output()
   onAddCity = new EventEmitter();
 
-  addCity(event: any){
+  addCity(event: any) {
     console.log(event);
     this.onAddCity.emit(event);
   }
 
   searchCity(event: any){
-     if(event.target.value.length > 3){
+     if (event.target.value.length > 3) {
       this.onSearchCity.emit(event.target.value);
      }
   }

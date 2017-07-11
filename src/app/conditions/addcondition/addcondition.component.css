@@ -3,9 +3,19 @@
     color:#000000;
     cursor: pointer;
     padding: 10px;
+    display: flex;
+    align-items: baseline;
 }
 
 .suggestion:hover {
     background-color : grey;
     color: #ffffff;
+}
+
+.img-suggestion {
+    margin-right: 10px;
+}
+
+.separator {
+    border-left: 1px solid #000000;
 }

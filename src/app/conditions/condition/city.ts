@@ -3,4 +3,5 @@ export class City {
     city: string;
     longitude: number;
     latitude: number;
+    fullCountry: any;
 }

@@ -38,7 +38,7 @@ export class ConditionService extends AbstractService {
     });
   }
 
-  getCities() : Observable<City[]> {
+  getCities(): Observable<City[]> {
     return this.configService.getCities().map(cities => {
       return cities.map(city => {
         const c = new City();
@@ -46,6 +46,7 @@ export class ConditionService extends AbstractService {
         c.country = city.country;
         c.longitude = city.coord.lon;
         c.latitude = city.coord.lat;
+        c.fullCountry = city.fullCountry;
         return c;
       });
     });

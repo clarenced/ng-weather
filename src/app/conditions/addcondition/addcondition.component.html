@@ -21,7 +21,11 @@
             </p>
         </div>
         <ul>
-          <li class="suggestion" (click)="addCity(city)" *ngFor="let city of cities">{{city.city}} | {{city.country}}</li>
+          <li class="suggestion" (click)="addCity(city)" *ngFor="let city of cities">
+              <img class="img-suggestion image is-16x16" src="{{city.fullCountry.flag}}" /> 
+              <span class="separator"></span> 
+              <span>{{city.city}}, {{city.fullCountry.name}}</span>
+            </li>
         </ul>
     </div>
     <button class="modal-close" (click)="closeModal()"></button>
