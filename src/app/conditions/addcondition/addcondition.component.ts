@@ -20,8 +20,8 @@ export class AddConditionComponent {
   onAddCity = new EventEmitter();
 
   addCity(event: any) {
-    console.log(event);
     this.onAddCity.emit(event);
+    this.cities = [];
   }
 
   searchCity(event: any){

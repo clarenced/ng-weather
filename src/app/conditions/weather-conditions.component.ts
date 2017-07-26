@@ -25,7 +25,7 @@ export class WeatherConditionsComponent implements OnInit {
      if (cityName) {
         this.conditionService.getCities().subscribe(searchedCities => {
         const found = searchedCities.filter(city => {
-          return city.city.includes(cityName);
+          return city.city.toLowerCase() === cityName.toLowerCase();
         });
         this.cities = [...found];
       });
@@ -36,5 +36,10 @@ export class WeatherConditionsComponent implements OnInit {
 
    addCity(city) {
     console.log(city);
+    this.conditionService
+        .getConditionByLatitudeLongitude(city.latitude, city.longitude)
+        .subscribe(condition => {
+          this.conditions.push(condition);
+        })
    }
 }
